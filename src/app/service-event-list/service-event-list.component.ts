@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ServiceEvent} from "../serviceEvent"
+import {ServiceEvent} from '../serviceEvent';
 import { ServiceEventsService } from '../services/service-events.service';
 
 
@@ -13,7 +13,6 @@ export class ServiceEventListComponent implements OnInit {
   events: ServiceEvent[];
 
   constructor(private eventService: ServiceEventsService) {
-     
   }
 
   ngOnInit() {

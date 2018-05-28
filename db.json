@@ -1,0 +1,27 @@
+
+{
+  "ServiceActions" : [
+
+    {
+      "Description": "Hander 1 sync successfull",
+      "LogEntry": "Log 1 2 3",
+      "Type": 1,
+      "Severity": 2
+    },
+    {
+      "Description": "Hander 2 sync successfull",
+      "LogEntry": "x y z",
+      "Type": 1,
+      "Severity": 2
+    },
+    {
+      "Description": "Hander 3 sync successfull",
+      "LogEntry": "sfsdfdsfsdf",
+      "Type": 1,
+      "Severity": 2
+    }
+
+  ]
+
+
+}

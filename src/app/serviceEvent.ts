@@ -18,4 +18,4 @@ export class ServiceEvent {
         this.Severity = severity;
     }
 
-}
+  }
