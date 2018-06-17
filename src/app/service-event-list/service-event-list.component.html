@@ -1,4 +1,18 @@
 
-<div *ngFor="let se of events">
-  <app-service-event [serviceEvent]="se"></app-service-event>
+
+
+<h2>{{title}}</h2>
+
+<div class="scrollPane">
+
+  <div *ngFor="let se of events">
+    <app-service-event 
+      [serviceEvent]="se"
+      (doServiceEventSelect)="selectServiceEvent($event)">
+    </app-service-event>
+  </div>
+
 </div>
+<app-service-event-details [serviceEvent]="selectedServiceEvent">
+</app-service-event-details>
+

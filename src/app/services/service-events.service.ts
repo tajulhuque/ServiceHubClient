@@ -16,12 +16,7 @@ export class ServiceEventsService {
 
   getServiceEvents(): Observable<ServiceEvent[]> {
 
-    return this.http.get<any>(this.serviceEventsUrl).pipe(
-             map((data) => {
-                return data.map(e => {
-                  return new ServiceEvent(e.Description, e.LogEntry, 1, 1);
-                });
-             }));
+    return this.http.get<ServiceEvent[]>(this.serviceEventsUrl);
   }
 
 }

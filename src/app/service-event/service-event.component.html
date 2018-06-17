@@ -1,12 +1,18 @@
 
-<div class="alert alert-danger">
+<div class="alert" 
+ (click)="selectServiceEvent()"
+ [ngClass] = "{
+   'alert-danger': serviceEvent.Severity == 3,
+   'alert-warning': serviceEvent.Severity == 2,
+   'alert-success': serviceEvent.Severity == 1
+ }">
   <div class="container">
-    <div class="row">
+    <div class="row alertBox">
       <div class="col-md-6">
         {{serviceEvent.Description}}
       </div>
       <div class="col-md-6">
-        {{serviceEvent.CreateDate}}
+       
       </div>
     </div>
   </div>

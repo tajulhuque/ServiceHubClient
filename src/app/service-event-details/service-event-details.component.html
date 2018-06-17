@@ -1,0 +1,14 @@
+
+<div class="detailsPanel">
+  <div *ngIf="!serviceEvent">
+    Click on an alert to view its details...
+  </div>
+  <div *ngIf="serviceEvent">
+    Service Event: {{serviceEvent.Description}} <br/>
+    Severity: {{serviceEvent.Severity}} <br/>
+    Type: {{serviceEvent.Type}}<br/>
+    <br/>
+    Log: <br/>
+    {{serviceEvent.LogEntry}}
+  </div>
+</div>

@@ -1,0 +1,10 @@
+.detailsPanel {
+    height: 200px;
+    width: 700px;
+    background-color: black;
+    color: lime;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    overflow-y: scroll;
+
+}
