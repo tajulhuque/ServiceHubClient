@@ -1,61 +1,121 @@
-
 {
-  "ServiceActions" : [
-
+  "ServiceActions": [
     {
+      "id": 1,
       "AppName": "Integration Handler",
       "Description": "Hander 1 sync successfull",
       "LogEntry": "Log 1 2 3",
       "Type": 1,
+      "CreateDate": "2018-01-01T23:28:56.782Z",
       "Severity": 1
     },
     {
+      "id": 2,
       "AppName": "Integration Handler",
       "Description": "Hander 2 sync successfull",
       "LogEntry": "x y z",
       "Type": 1,
+      "CreateDate": "2018-01-01T23:28:56.782Z",
       "Severity": 1
     },
     {
+      "id": 3,
       "AppName": "Integration Handler",
       "Description": "Hander 3 sync successfull",
       "LogEntry": "sfsdfdsfsdf",
       "Type": 1,
+      "CreateDate": "2018-01-01T23:28:56.782Z",
       "Severity": 1
     },
-    { "AppName": "Integration Handler",
-      "Description": "Hander 3 sync successfull",
-      "LogEntry": "sfsdfdsfsdf",
-      "Type": 1,
-      "Severity": 1
-    },{
+    {
+      "id": 4,
       "AppName": "Integration Handler",
       "Description": "Hander 3 sync successfull",
       "LogEntry": "sfsdfdsfsdf",
       "Type": 1,
-      "Severity": 1
-    },{
-      "AppName": "Email Parser",
-      "Description": "Email succesfully converted to ticket",
-      "LogEntry": "sfsdfdsfsdf",
-      "Type": 1,
-      "Severity": 1
-    },{
-      "AppName": "Email Parser",
-      "Description": "Email succesfully converted to ticket",
-      "LogEntry": "sfsdfdsfsdf",
-      "Type": 1,
+      "CreateDate": "2018-01-01T23:28:56.782Z",
       "Severity": 1
     },
     {
+      "id": 5,
+      "AppName": "Integration Handler",
+      "Description": "Hander 3 sync successfull",
+      "LogEntry": "sfsdfdsfsdf",
+      "Type": 1,
+      "CreateDate": "2018-01-01T23:28:56.782Z",
+      "Severity": 1
+    },
+    {
+      "id": 6,
+      "AppName": "Email Parser",
+      "Description": "Email succesfully converted to ticket",
+      "LogEntry": "sfsdfdsfsdf",
+      "Type": 1,
+      "Severity": 1,
+      "CreateDate": "2018-01-01T23:28:56.782Z"
+    },
+    {
+      "id": 7,
       "AppName": "Integration Handler",
       "Description": "Integration Handler couldn't connect...",
       "LogEntry": "Starting processing, connecting to APIs... failed to connect",
       "Type": 1,
+      "CreateDate": "2018-01-01T23:28:56.782Z",
       "Severity": 3
+    },
+    {
+      "Description": "test",
+      "LogEntry": "test",
+      "Type": 1,
+      "Severity": 3,
+      "AppName": "test",
+      "CreateDate": "2018-01-01T23:28:56.782Z",
+      "id": 8
+    },
+    {
+      "Description": "test",
+      "LogEntry": "test",
+      "Type": 1,
+      "Severity": 3,
+      "AppName": "test2",
+      "CreateDate": "2018-01-01T23:28:56.782Z",
+      "id": 9
+    },
+    {
+      "Description": "sdf",
+      "LogEntry": "a",
+      "Type": 1,
+      "Severity": 3,
+      "AppName": "asdf",
+      "CreateDate": "2018-01-01T23:28:56.782Z",
+      "id": 10
+    },
+    {
+      "Description": "Test Event",
+      "LogEntry": "Log step 1, step 2, step 3, step 4",
+      "Type": 1,
+      "Severity": 3,
+      "AppName": "Test App",
+      "CreateDate": "2018-01-01T23:28:56.782Z",
+      "id": 11
+    },
+    {
+      "Description": "Could not find device target",
+      "LogEntry": "Log 1 ,  ...",
+      "Type": 1,
+      "Severity": 3,
+      "AppName": "Email Parser",
+      "CreateDate": "2018-01-01T23:28:56.782Z",
+      "id": 12
+    },
+    {
+      "Description": "Failed to parse DeviceID",
+      "LogEntry": "Log 1, log text text text text text text",
+      "Type": 1,
+      "Severity": 3,
+      "AppName": "Email Parser",
+      "CreateDate": "2018-06-20T02:16:00.839Z",
+      "id": 13
     }
-
   ]
-
-
 }

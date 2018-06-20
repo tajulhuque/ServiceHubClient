@@ -12,17 +12,21 @@ export class ServiceEvent {
 
     Severity: number;
 
+    CreateDate: Date;
+
     constructor(description: string, 
                 logentry: string, 
                 type: number, 
                 severity: number,
-                appName: string) {
+                appName: string,
+                createDate: Date) {
 
         this.Description = description;
         this.LogEntry = logentry;
         this.Type = type;
         this.Severity = severity;
         this.AppName = appName;
+        this.CreateDate = createDate;
     }
 
   }

@@ -7,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServiceEventComponent } from './service-event/service-event.component';
 import { ServiceEventDetailsComponent } from './service-event-details/service-event-details.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { TestFormComponent } from './test-form/test-form.component';
+import {FormsModule} from '@angular/forms'
 
 const appRoutes: Routes = [
   { 
@@ -20,9 +22,13 @@ const appRoutes: Routes = [
     data: {AppName: 'Integration Handler'} 
   },
   { 
+    path: 'test-form', 
+    component: TestFormComponent
+  },
+  { 
     path: '**', 
     component: ServiceEventListComponent,
-    data: {AppName: ''}
+    data: {AppName: 'all'}
   }
 ];
 
@@ -32,12 +38,14 @@ const appRoutes: Routes = [
     ServiceEventListComponent,
     ServiceEventComponent,
     ServiceEventDetailsComponent,
-    NavigationComponent
+    NavigationComponent,
+    TestFormComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
