@@ -1,18 +1,18 @@
 
 
 
-<h2>{{title}}</h2>
-
+<hr>
+<h6><span style="font-style: italic;">Events {{title}}</span></h6>
 <div class="scrollPane">
-
   <div *ngFor="let se of events">
     <app-service-event 
       [serviceEvent]="se"
       (doServiceEventSelect)="selectServiceEvent($event)">
     </app-service-event>
   </div>
-
 </div>
+<br/>
+<h6><span style="font-style: italic;">Event Details</span></h6>
 <app-service-event-details [serviceEvent]="selectedServiceEvent">
 </app-service-event-details>
 

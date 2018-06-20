@@ -2,6 +2,8 @@
 
 export class ServiceEvent {
 
+    AppName: string;
+
     Description: string;
 
     LogEntry: string;
@@ -10,12 +12,17 @@ export class ServiceEvent {
 
     Severity: number;
 
-    constructor(description: string, logentry: string, type: number, severity: number) {
+    constructor(description: string, 
+                logentry: string, 
+                type: number, 
+                severity: number,
+                appName: string) {
 
         this.Description = description;
         this.LogEntry = logentry;
         this.Type = type;
         this.Severity = severity;
+        this.AppName = appName;
     }
 
   }

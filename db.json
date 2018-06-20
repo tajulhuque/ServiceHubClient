@@ -3,45 +3,52 @@
   "ServiceActions" : [
 
     {
+      "AppName": "Integration Handler",
       "Description": "Hander 1 sync successfull",
       "LogEntry": "Log 1 2 3",
       "Type": 1,
       "Severity": 1
     },
     {
+      "AppName": "Integration Handler",
       "Description": "Hander 2 sync successfull",
       "LogEntry": "x y z",
       "Type": 1,
       "Severity": 1
     },
     {
+      "AppName": "Integration Handler",
       "Description": "Hander 3 sync successfull",
       "LogEntry": "sfsdfdsfsdf",
       "Type": 1,
       "Severity": 1
     },
-    {
+    { "AppName": "Integration Handler",
       "Description": "Hander 3 sync successfull",
       "LogEntry": "sfsdfdsfsdf",
       "Type": 1,
       "Severity": 1
     },{
+      "AppName": "Integration Handler",
       "Description": "Hander 3 sync successfull",
       "LogEntry": "sfsdfdsfsdf",
       "Type": 1,
       "Severity": 1
     },{
-      "Description": "Hander 3 sync successfull",
+      "AppName": "Email Parser",
+      "Description": "Email succesfully converted to ticket",
       "LogEntry": "sfsdfdsfsdf",
       "Type": 1,
       "Severity": 1
     },{
-      "Description": "Hander 3 sync successfull",
+      "AppName": "Email Parser",
+      "Description": "Email succesfully converted to ticket",
       "LogEntry": "sfsdfdsfsdf",
       "Type": 1,
       "Severity": 1
     },
     {
+      "AppName": "Integration Handler",
       "Description": "Integration Handler couldn't connect...",
       "LogEntry": "Starting processing, connecting to APIs... failed to connect",
       "Type": 1,

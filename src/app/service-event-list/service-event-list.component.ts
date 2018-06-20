@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ServiceEvent} from '../serviceEvent';
 import { ServiceEventsService } from '../services/service-events.service';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 
 
 @Component({
@@ -14,19 +16,42 @@ export class ServiceEventListComponent implements OnInit {
   events: ServiceEvent[];
   selectedServiceEvent: ServiceEvent = null;
 
-  constructor(private eventService: ServiceEventsService) {    
+  constructor(private eventService: ServiceEventsService,
+              private router: Router) {    
   }
 
   ngOnInit() {
 
-    this.title = "All Events"
-
     this.eventService.getServiceEvents()
-      .subscribe(data => this.events = data);
+      .subscribe(data => {
+        this.events = this.filterEventsForRoute(data, this.router.url);
+      });
   }
 
   selectServiceEvent(servEvent:ServiceEvent) {
     this.selectedServiceEvent = servEvent;
+  }
+
+  filterEventsForRoute(events: ServiceEvent[], routeUrl: string) : ServiceEvent[] {
+    
+   switch(routeUrl) {
+     case '/integration': {
+       this.title = "(Integration Handler)"
+      return events.filter(se => se.AppName == 'Integration Handler'); 
+     }
+     case '/email-parser': {
+      this.title = "(Email Parser)"
+      return events.filter(se => se.AppName == 'Email Parser');
+     }
+     case '/all': {
+       this.title = ''
+       return events;
+     }
+     case '': {
+       this.title = ''
+       return events;
+     }
+   }
   }
 
 }

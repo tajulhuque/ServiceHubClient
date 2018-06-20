@@ -1,9 +1,10 @@
 
 <div class="detailsPanel">
   <div *ngIf="!serviceEvent">
-    Click on an alert to view its details...
+    Click on an event to view its details...
   </div>
   <div *ngIf="serviceEvent">
+    Application: {{serviceEvent.AppName}} <br/>
     Service Event: {{serviceEvent.Description}} <br/>
     Severity: {{serviceEvent.Severity}} <br/>
     Type: {{serviceEvent.Type}}<br/>
