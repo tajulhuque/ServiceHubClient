@@ -22,9 +22,14 @@ export class ServiceEventListComponent implements OnInit {
 
   ngOnInit() {
 
+    console.log("dfsdf");
+
     this.eventService.getServiceEvents()
       .subscribe(data => {
+        console.log(data);
+        //this.events = data;
         this.events = this.filterEventsForRoute(data, this.router.url);
+        //console.log(this.events);
       });
   }
 
@@ -37,11 +42,11 @@ export class ServiceEventListComponent implements OnInit {
    switch(routeUrl) {
      case '/integration': {
        this.title = "(Integration Handler)"
-      return events.filter(se => se.AppName == 'Integration Handler'); 
+      return events.filter(se => se.appName == 'Integration Handler'); 
      }
      case '/email-parser': {
       this.title = "(Email Parser)"
-      return events.filter(se => se.AppName == 'Email Parser');
+      return events.filter(se => se.appName == 'Email Parser');
      }
      case '/all': {
        this.title = ''

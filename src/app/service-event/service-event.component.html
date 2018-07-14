@@ -2,20 +2,20 @@
 <div class="alert" 
  (click)="selectServiceEvent()"
  [ngClass] = "{
-   'alert-danger': serviceEvent.Severity == 3,
-   'alert-warning': serviceEvent.Severity == 2,
-   'alert-success': serviceEvent.Severity == 1
+   'alert-danger': serviceEvent.severity == 3,
+   'alert-warning': serviceEvent.severity == 2,
+   'alert-success': serviceEvent.severity == 1
  }">
   <div class="container">
     <div class="row alertBox">
       <div class="col-md-4">
-        {{serviceEvent.AppName}}
+        {{serviceEvent.appName}}
       </div>
       <div class="col-md-4">
-          {{serviceEvent.Description}} 
+          {{serviceEvent.description}} 
         </div>
       <div class="col-md-4">
-          {{serviceEvent.CreateDate}}
+          {{serviceEvent.createDate}}
       </div>
     </div>
   </div>
