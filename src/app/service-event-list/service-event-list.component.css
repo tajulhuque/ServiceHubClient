@@ -1,6 +1,6 @@
 .scrollPane {
     height: 300px;
-    width: 700px;
+    width: 80%;
     border: 1px solid gray;
     overflow-y: scroll;
 }

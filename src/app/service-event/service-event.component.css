@@ -4,3 +4,12 @@ div.alert {
     width: 680px;
 }
 
+div.isSelected {
+    border: 1px solid lime;
+    font-weight: bold;
+}
+
+div.alert:hover {
+    border: 2px solid gold !important;
+}
+

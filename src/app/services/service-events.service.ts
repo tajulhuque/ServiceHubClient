@@ -9,8 +9,8 @@ import { map } from 'rxjs/operators';
 })
 export class ServiceEventsService {
 
-  // private serviceEventsUrl = 'http://localhost:52836/api/ServiceActions';
-  private serviceEventsUrl = 'https://servicehubapi2.azurewebsites.net/api/serviceevent';
+  private serviceEventsUrl = 'http://localhost:5000/api/serviceevent';
+  //private serviceEventsUrl = 'https://servicehubapi2.azurewebsites.net/api/serviceevent';
 
   
 

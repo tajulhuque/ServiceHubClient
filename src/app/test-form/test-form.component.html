@@ -23,6 +23,15 @@
            [(ngModel)]="serviceEvent.logEntry"/>
   </div>
 
+  <div class="form-group">  
+        <label for="sevSelect">Severity:</label>
+        <select id="sevSelect" class="form-control"  [(ngModel)]="serviceEvent.severity">
+             <option>1</option>
+             <option>2</option>
+             <option>3</option>
+        </select>
+      </div>
+
   <div class="btn-group mr-2" role="group" aria-label="Save">
       <button type="button"
               class="btn btn-primary"

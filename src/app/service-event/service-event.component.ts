@@ -12,12 +12,16 @@ export class ServiceEventComponent implements OnInit {
   @Input()
   public serviceEvent: ServiceEvent;
 
+  @Input()
+  public isSelected: boolean;
+
   @Output()
   public doServiceEventSelect = new EventEmitter<ServiceEvent>();
 
   constructor() { }
 
   ngOnInit() {
+    //this.isSelected = true;
   }
 
   selectServiceEvent() {

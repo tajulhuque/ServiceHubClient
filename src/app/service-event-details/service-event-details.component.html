@@ -1,15 +1,26 @@
 
-<div class="detailsPanel">
+<div>
   <div *ngIf="!serviceEvent">
     Click on an event to view its details...
   </div>
   <div *ngIf="serviceEvent">
-    Application: {{serviceEvent.AppName}} <br/>
-    Service Event: {{serviceEvent.Description}} <br/>
-    Severity: {{serviceEvent.Severity}} <br/>
-    Type: {{serviceEvent.Type}}<br/>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">Application: {{serviceEvent.appName}}</div>
+        <div class="col-sm">Severity: {{serviceEvent.severity}}</div>
+        <div class="col-sm">Service Event: {{serviceEvent.description}}</div>
+        <div class="col-sm">Type: {{serviceEvent.type}}</div>
+      </div>
+
+      
+
+    </div>
+    
     <br/>
     Log: <br/>
-    {{serviceEvent.LogEntry}}
+    <div class="detailsPanel">
+      {{serviceEvent.logEntry}}
+    </div>
   </div>
 </div>
