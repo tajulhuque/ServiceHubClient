@@ -8,7 +8,17 @@
     <div class="container">
       <div class="row">
         <div class="col-sm">Application: {{serviceEvent.appName}}</div>
-        <div class="col-sm">Severity: {{serviceEvent.severity}}</div>
+        
+        <div class="col-sm">
+            Severity: 
+          <a href="#" class="badge badge-pill" [ngClass] = "{
+            'badge-danger': serviceEvent.severity == 3,
+            'badge-warning': serviceEvent.severity == 2,
+            'badge-success': serviceEvent.severity == 1
+          }">
+          {{serviceEvent.severity == 3 ? 'High' : 'Low'}}
+        </a>
+        </div>
         <div class="col-sm">Service Event: {{serviceEvent.description}}</div>
         <div class="col-sm">Type: {{serviceEvent.type}}</div>
       </div>
