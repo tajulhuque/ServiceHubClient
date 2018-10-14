@@ -21,8 +21,14 @@ export class TestFormComponent implements OnInit {
 
   createServieEvent() {
     console.log(this.serviceEvent);
-    this.eventService.addServiceEvent(this.serviceEvent).subscribe();
-    this.router.navigateByUrl('/all');
+    this.eventService.addServiceEvent(this.serviceEvent).subscribe(
+      {
+        next: () => {},
+        error: err => console.log("error occurred: "  + err),
+        complete: () =>this.router.navigateByUrl('/all'),
+      }
+    );
+    
   }
 
 }

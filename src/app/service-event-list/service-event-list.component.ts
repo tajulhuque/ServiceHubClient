@@ -27,9 +27,7 @@ export class ServiceEventListComponent implements OnInit {
     this.eventService.getServiceEvents()
       .subscribe(data => {
         console.log(data);
-        //this.events = data;
         this.events = this.filterEventsForRoute(data, this.router.url);
-        //console.log(this.events);
       });
   }
 
@@ -39,7 +37,10 @@ export class ServiceEventListComponent implements OnInit {
 
   filterEventsForRoute(events: ServiceEvent[], routeUrl: string) : ServiceEvent[] {
     
+    console.log("url is" + routeUrl);
+
    switch(routeUrl) {
+     
      case '/integration': {
        this.title = "(Integration Handler)"
       return events.filter(se => se.appName == 'Integration Handler'); 
@@ -52,7 +53,7 @@ export class ServiceEventListComponent implements OnInit {
        this.title = ''
        return events;
      }
-     case '': {
+     case '/': {
        this.title = ''
        return events;
      }
