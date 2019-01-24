@@ -1,12 +1,9 @@
 .detailsPanel {
     height: 200px;
-    width: 80%;
-    background-color: black;
-    color: lime;
+    width: 100%;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9em;
     overflow-y: scroll;
-
 }
 
 .badge {

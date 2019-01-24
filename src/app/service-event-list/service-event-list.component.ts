@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ServiceEvent} from '../serviceEvent';
+import {ServiceEvent} from '../service data/serviceEvent';
 import { ServiceEventsService } from '../services/service-events.service';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
@@ -22,12 +22,14 @@ export class ServiceEventListComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log("dfsdf");
+    
 
     this.eventService.getServiceEvents()
       .subscribe(data => {
+        console.log("logging data from service:")
         console.log(data);
         this.events = this.filterEventsForRoute(data, this.router.url);
+       
       });
   }
 
@@ -37,7 +39,7 @@ export class ServiceEventListComponent implements OnInit {
 
   filterEventsForRoute(events: ServiceEvent[], routeUrl: string) : ServiceEvent[] {
     
-    console.log("url is" + routeUrl);
+    
 
    switch(routeUrl) {
      

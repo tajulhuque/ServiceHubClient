@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceEventsService } from '../services/service-events.service';
-import { ServiceEvent } from '../serviceEvent';
+import { ServiceEvent } from '../service data/serviceEvent';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,7 +16,7 @@ export class TestFormComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
-    this.serviceEvent = new ServiceEvent('', '', 1, 3, '', new Date());
+    this.serviceEvent = new ServiceEvent();
   }
 
   createServieEvent() {

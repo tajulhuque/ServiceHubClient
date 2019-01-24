@@ -2,7 +2,9 @@
 
 
 <hr>
-<h6><span style="font-style: italic;">Events {{title}}</span></h6>
+<div class="card">
+
+  <h5><div style="font-style: italic;" class="card-header">Events {{title}}</div></h5>
 <div class="scrollPane">
   <div *ngFor="let se of events">
     <app-service-event 
@@ -13,7 +15,14 @@
   </div>
 </div>
 <br/>
-<h6><span style="font-style: italic;">Event Details</span></h6>
-<app-service-event-details [serviceEvent]="selectedServiceEvent">
-</app-service-event-details>
+</div>
+<div class="card mt-2">
+  <h5><div style="font-style: italic;" class="card-header">Event Details</div></h5>
+  <app-service-event-details [serviceEvent]="selectedServiceEvent">
+  </app-service-event-details>
+</div>
+
+
+
+
 

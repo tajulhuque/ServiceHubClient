@@ -3,34 +3,40 @@
   <div *ngIf="!serviceEvent">
     Click on an event to view its details...
   </div>
-  <div *ngIf="serviceEvent">
-    
-    <div class="container">
-      <div class="row">
-        <div class="col-sm">Application: {{serviceEvent.appName}}</div>
-        
-        <div class="col-sm">
-            Severity: 
-          <a href="#" class="badge badge-pill" [ngClass] = "{
-            'badge-danger': serviceEvent.severity == 3,
-            'badge-warning': serviceEvent.severity == 2,
-            'badge-success': serviceEvent.severity == 1
-          }">
-          {{serviceEvent.severity == 3 ? 'High' : 'Low'}}
-        </a>
-        </div>
-        <div class="col-sm">Service Event: {{serviceEvent.description}}</div>
-        <div class="col-sm">Type: {{serviceEvent.type}}</div>
-      </div>
-
-      
-
-    </div>
-    
-    <br/>
-    Log: <br/>
-    <div class="detailsPanel">
-      {{serviceEvent.logEntry}}
-    </div>
+  <div *ngIf="serviceEvent">    
+    <table class="table mb-0">
+      <thead>
+        <th>Service Event</th>
+        <th>Application</th>
+        <th>Severity</th>
+        <th>Type</th>
+      </thead>
+      <tbody>
+        <td>{{serviceEvent.description}}</td>
+        <td>{{serviceEvent.appName}}</td>
+        <td><a href="#" class="badge badge-pill" [ngClass] = "{
+          'badge-danger': serviceEvent.severity == 3,
+          'badge-warning': serviceEvent.severity == 2,
+          'badge-success': serviceEvent.severity == 1
+        }">
+        {{serviceEvent.severity == 3 ? 'High' : 'Low'}}
+      </a></td>
+        <td>{{serviceEvent.type}}</td>
+      </tbody>
+    </table>
+    <table class="table">
+      <!-- <thead>
+          <th style="font-size: .8em">
+            Program Log Trace
+          </th>
+      </thead> -->
+      <tbody>
+        <td class="detailsPanel">
+            {{serviceEvent.logEntry}}
+        </td>
+      </tbody>
+    </table>
+    <app-service-event-retention [retentionPolicy] = "serviceEvent.retentionPolicy">
+    </app-service-event-retention>
   </div>
 </div>

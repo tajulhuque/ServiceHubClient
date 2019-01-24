@@ -8,7 +8,8 @@ import { ServiceEventComponent } from './service-event/service-event.component';
 import { ServiceEventDetailsComponent } from './service-event-details/service-event-details.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { TestFormComponent } from './test-form/test-form.component';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import { ServiceEventRetentionComponent } from './service-event-retention/service-event-retention.component'
 
 const appRoutes: Routes = [
   { 
@@ -39,7 +40,8 @@ const appRoutes: Routes = [
     ServiceEventComponent,
     ServiceEventDetailsComponent,
     NavigationComponent,
-    TestFormComponent
+    TestFormComponent,
+    ServiceEventRetentionComponent
   ],
   imports: [
     BrowserModule,

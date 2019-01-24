@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { ServiceEvent } from '../serviceEvent';
+import { ServiceEvent } from '../service data/serviceEvent';
 
 
 @Component({

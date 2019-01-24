@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ServiceEvent } from '../serviceEvent';
+import { ServiceEvent } from '../service data/serviceEvent';
 
 @Component({
   selector: 'app-service-event-details',
@@ -14,6 +14,7 @@ export class ServiceEventDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+   
   }
 
 }

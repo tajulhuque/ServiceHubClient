@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { ServiceEvent } from '../serviceEvent';
+import { ServiceEvent } from '../service data/serviceEvent';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -27,7 +27,7 @@ export class ServiceEventsService {
       })
     };
 
-    return this.http.post<ServiceEvent>(this.serviceEventsUrl, serviceEvent,httpOptions);
+    return this.http.post<ServiceEvent>(this.serviceEventsUrl, serviceEvent, httpOptions);
   }
 
 }
