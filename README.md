@@ -11,7 +11,7 @@
  
  2. An "Integration Handler" that does API based integrations.  You might want to know everytime some data is synced, so you can can know to go look a the end result and make sure it looks good in the target system.
  
- 3. Any error that a service runs into needs jump out at you.  The event in this needs to show the log trace, exception information, and stack trace to help you debug
+ 3. Any error that a service runs into needs to be very visible so that developers can be made aware immediately and resolve quickly.  The event in this case needs to show the log trace, exception information, and stack trace to help you debug
  
 ## Retention
 Depending on how many events and how frequently services publish events to the Service Hub, the amount of data to persist could grow quite large.  Therefore, a retention policy mechanism was developed.  Retention policies can be created which can be setup to have rules that match to events.  When a retention policy matches to a certain event, that event will only live for as long as specified in the retention policy
