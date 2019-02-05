@@ -1,6 +1,6 @@
 # Service Hub 
 
-"Service Hub" is an applicaiton for monitoring the activity of backend services.  Backend services can publish events to an API to signal that something was completed succesfully or if an error occurred.  The goal is to have one central view where all services "pass through" (a "hub") and report their recent interesting activity.  This project was creating as learning project but also to address a real need at my current job.  My development team is currenlty relying on email notificaitons sent by our backend services.  Emails can get shuffled away by oulook rules and missed so hence the need for a dashboard like this.
+"Service Hub" is an applicaiton for monitoring the activity of backend services.  Backend services can publish events to an API to signal that something was completed succesfully or if an error occurred.  The goal is to have one central view where all services "pass through" (a "hub") and report their recent interesting activity.  This project was created as learning project but also to address a real need at my current job.  My development team and I are currenlty relying on email notificaitons sent by our backend services.  Emails can get shuffled away by oulook rules and missed so hence the need for a dashboard like this.
  
 ## Archiecture
  ServiceHubClient:  https://github.com/tajulhuque/ServiceHubClient/  - An Angular 4 applicaiton for the user interface
