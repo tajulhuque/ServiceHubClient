@@ -5,16 +5,31 @@
         Retention Policy
       </th>
       <th>
-        Hours to retain
+        Retain for:
       </th>
     </thead>
     <tbody>
-      <td>
-          {{retentionPolicy.description}}
-      </td>
-      <td>
-        {{retentionPolicy.retentionTimeHours}}
-      </td>
+      <tr>
+          <td [class.isRetained]="serviceEvent.isRetained">
+              {{serviceEvent.retentionPolicy.description}}
+          </td>
+          <td>
+              <div *ngIf="serviceEvent.isRetained">
+                  forever
+              </div>
+            <div *ngIf="!serviceEvent.isRetained">
+                {{serviceEvent.retentionPolicy.retentionTimeHours}} hours
+            </div>
+          </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+            Retain forever? 
+            <input [(ngModel)]="serviceEvent.isRetained" 
+                    (change)="UpdateServieEvent()" 
+                    type="checkbox"/>
+        </td>
+      </tr>
     </tbody>
   </table>  
 </div>

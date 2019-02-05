@@ -3,6 +3,8 @@ import { RetentionPolicy } from "./retentionPolicy";
 
 export class ServiceEvent {
 
+    id: number;
+
     appName: string;
 
     description: string;
@@ -16,6 +18,8 @@ export class ServiceEvent {
     createDate: Date;
 
     retentionPolicy: RetentionPolicy;
+
+    isRetained: boolean;
 
     // constructor(description: string, 
     //             logentry: string, 

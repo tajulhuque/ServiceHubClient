@@ -25,18 +25,13 @@
       </tbody>
     </table>
     <table class="table">
-      <!-- <thead>
-          <th style="font-size: .8em">
-            Program Log Trace
-          </th>
-      </thead> -->
       <tbody>
         <td class="detailsPanel">
             {{serviceEvent.logEntry}}
         </td>
       </tbody>
     </table>
-    <app-service-event-retention [retentionPolicy] = "serviceEvent.retentionPolicy">
+    <app-service-event-retention [serviceEvent] = "serviceEvent">
     </app-service-event-retention>
   </div>
 </div>
